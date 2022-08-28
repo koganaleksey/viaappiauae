@@ -17755,48 +17755,10 @@ var Platform = {};
 
 "use strict";
 
-// if (navigator.language || navigator.userLanguage === "ru_RU") {
-//   document.documentElement.lang = "ru";
-//   document.title = 'Компания "Хил Гурлушык"';
-// } else {
-//   document.documentElement.lang = "en";
-//   document.title = 'Company "Hil Gurlushyk"';
-// }
-
 $(document).ready(function () {
   $("body").autoPadding({
     source: $(".js-header"),
   });
-
-  // Language changer
-
-  $(".langen").on("click", function () {
-    document.documentElement.lang = "en";
-    document.title = 'Company "Hil Gurlushyk"';
-  });
-
-  $(".langru").on("click", function () {
-    document.documentElement.lang = "ru";
-    document.title = 'Компания "Хил Гурлушык"';
-  });
-
-  // END Language Changer
-
-
-  // Cover img effect
-
-  const img = document.querySelector("#cover-img");
-  const windowWidth = window.innerWidth / 5;
-  const windowHeight = window.innerHeight / 5;
-
-  img.addEventListener("mousemove", (e) => {
-    const mouseX = e.clientX / windowWidth;
-    const mouseY = e.clientY / windowHeight;
-
-    img.style.transform = `translate3d(${mouseX + 7}%, ${mouseY + 7}%, 0)`;
-  });
-
-  // END Cover img effect
 
   // Burger Menu
   $("#myInput").change(function () {
@@ -17815,17 +17777,6 @@ $(document).ready(function () {
     $('body').removeClass("no-scroll");
     $("#myInput").prop('checked', false)
   })
-
-    // End Burger Menu
-
-    // Slow Links
-    // $(".nav, #cover, #footernav").on("click", "a", function (event) {
-    //   event.preventDefault();
-    //   var id = $(this).attr("href"),
-    //     top = $(id).offset().top;
-    //   $("body,html").animate({ scrollTop: top }, 1500);
-    // });
-    // End // Slow Links
 
     // Form Validation
     (function () {
